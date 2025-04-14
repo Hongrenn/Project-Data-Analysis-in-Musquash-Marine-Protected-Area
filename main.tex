@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage[spanish,es-tabla]{babel}
+%\usepackage[spanish,es-tabla]{babel}
 %\usepackage{natbib}
 \usepackage{url}
 \usepackage[utf8]{inputenc}
@@ -26,9 +26,9 @@
 
 \setmarginsrb{3 cm}{1 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 
-\LARGE{\title{Data Analysis in Musquash Marine Protected Area}}								% Title
+\LARGE{\title{Data Analysis in Musquash Marine Protected Area}}	% Title
 
-\author{Álvaro Ignacio Pinto Lohmann}								% Author
+\author{Group 2 Members}								% Author
 \date{\today}											% Date
 
 \makeatletter
@@ -92,14 +92,14 @@ Hongren Zhu\\
 Dr. Ethan Lawler\\
 
 
-\vspace{5 cm}
+\vspace{3 cm}
 
 
 \begin{center}
 \textbf{GitHub repository: } \url{github.com}
 \end{center}
 
-\vspace{2cm}
+\vspace{3cm}
 Group 2 Project Report\\
 Dalhousie University
 %Fono: 
@@ -109,57 +109,6 @@ Dalhousie University
 	
 \end{titlepage}
 
-
-\newpage
-
-\section*{Estado de Revisiones}
-
-\begin{table}[h]
-\centering
-\resizebox{\textwidth}{!}{%
-
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-\multicolumn{6}{|l|}{Estado de Revisiones}\\
-\hline
-\multicolumn{2}{|l|}{Orden de servicio} & \multicolumn{4}{l|}{NovaManufacturing}\\
-\hline
-\multicolumn{2}{|l|}{Proyecto}  & \multicolumn{4}{l|}{....}\\
-\multicolumn{2}{|l|}{} & \multicolumn{4}{l|}{....}\\
-\hline
-\multicolumn{2}{|l|}{Título} & \multicolumn{4}{l|}{Informe de selección de ....}\\
-\hline
-\multicolumn{2}{|l|}{$N^{o}$ de documento} & \multicolumn{4}{l|}{---}\\
-\hline
-\multicolumn{2}{|l|}{Revisión} & \multicolumn{4}{l|}{Por NovaManufacturing}\\
-\hline
-$N^{o}$ & Detalle & Datos & Realizó & Revisó & Aprobó\\
-\hline
-\multirow{4}{*}{A} & \multirow{3}{*}{Entrega de selección de materiales, cubicación y costeo} & Nombre & C.B.-S.V.-A.P.-R.F. & S.V.-A.P. & R.F.\\
-\cline{3-6}
-& & Fecha & 19-04-2018 & 19-04-2018 & 19-04-2018\\
-\cline{3-6}
-& & \multirow{12}{*}{ Firma } & \multirow{2}{*}{ } & \multirow{12}{*}{  } & \multirow{12}{*}{  }\\
-
-& &  & &  & \\
-& &  & &  & \\
-& &  & &  & \\
-& &  & &  & \\
-& &  & &  & \\
-& &  & &  & \\
-& &  & &  & \\
-& &  & &  & \\
-& &  & &  & \\
-& &  & &  & \\
-& &  & &  & \\
-\hline
-\end{tabular}%
-}
-
-\end{table}
-
-
-\thispagestyle{empty} %Para que no enumere la pagina
 
 \newpage
 \thispagestyle{empty} %Para que no enumere la pagina
@@ -202,20 +151,11 @@ $N^{o}$ & Detalle & Datos & Realizó & Revisó & Aprobó\\
 
 \section{Introduction}
 
-\qquad El proyecto fue entregado el día ... junto a datos pertinentes al mismo como ....
+\qquad The Musquash Estuary represents the largest ecologically intact estuary in the Bay of Fundy, located approximately 20 kilometers southwest of Saint John, New Brunswick. Designated as a Marine Protected Area (MPA) in 2006, this ecosystem serves as a critical habitat for diverse terrestrial and marine species. The MPA designation aims to minimize human impact while permitting regulated activities through a structured management zone system. Indigenous fishing is permitted throughout the area, while commercial fishing activities face restrictions based on zones and target species\cite{DFO2017}.
 
-\qquad Desde entonces, NovaManufacturing, soluciones ingenieriles, trabajó en un plan de trabajo a seguir para llevar a cabo el proyecto. Este plan de trabajo se detalla en la carta Gantt y curva S entregadas al cliente el día ... del presente año. Desde entonces se ha trabajado en la selección de materiales, cubicación y cotización para cada pieza que componen las unidades estructurales de ...
+\qquad This research utilizes comprehensive datasets collected by Fisheries and Oceans Canada spanning from 2010 to September 2023. The data collection protocol involved sampling from 30 randomly distributed stations across three distinct strata (channel, subtidal, and intertidal zones), with sampling conducted up to three times annually to account for seasonal and yearly variations. Each sample underwent thorough analysis for sediment grain size distribution, carbon content, and benthic species biomass.
 
-\qquad Luego; se entrega un informe el dia .... en donde se detallan las tareas realizadas hasta la fecha.
-
-\qquad A continuacion, en la figura \ref{S_curve}, se muestra el avance en la curva S entregada en el informe actual.
-
-%\begin{figure}[h!]
-%\centering
-%\includegraphics[scale=1]{curvaS_final}
-%\caption{Curva S para fecha ....\label{curvaS}}
-%\end{figure}
-
+\qquad Our study aims to evaluate how the MPA maintains biodiversity by assessing benthic species population consistency and ecosystem dynamics. Specifically, we investigate how sediment texture (grain size) and organic matter content (measured through Loss on Ignition) influence the spatial distribution of benthic biomass within the Musquash MPA. Understanding these relationships is crucial for effective conservation management and for evaluating the long-term success of marine protection measures.
 
 \newpage
 
@@ -308,18 +248,16 @@ $N^{o}$ & Detalle & Datos & Realizó & Revisó & Aprobó\\
 
 
 \newpage
-\section{Referencias}
-\renewcommand{\refname}{}
-\begin{thebibliography}{X}
+%\section{References}
+\bibliography{references}
+\bibliographystyle{plain}
 
-\bibitem{ref1} \textit{...}, ...
+%\renewcommand{\refname}{}
+%\begin{thebibliography}{X}
 
-
-\end{thebibliography}
-
-\newpage
-\section{Anexos}
+%\bibitem{ref1} \textit{...}, ...
 
 
+%\end{thebibliography}
 
 \end{document}
