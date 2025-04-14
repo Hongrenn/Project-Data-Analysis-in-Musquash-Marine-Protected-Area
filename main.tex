@@ -24,6 +24,9 @@
 \definecolor{mylilas}{RGB}{170,55,241}
 
 
+\usepackage{tabularx}
+
+
 \setmarginsrb{3 cm}{1 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 
 \LARGE{\title{Data Analysis in Musquash Marine Protected Area}}	% Title
@@ -161,7 +164,68 @@ Dalhousie University
 
 \section{Data Description}
 
-\qquad En el presente informe se da cuenta del estado de avance del proyecto ``....''
+\subsection{Data Sources and Collection Methodology}
+
+\qquad The dataset represents a comprehensive ecological monitoring effort within the Musquash MPA. Data collection followed standardized protocols established by Fisheries and Oceans Canada, ensuring consistency across sampling events. The sampling design incorporated stratified random sampling across three distinct habitat types: channel, subtidal, and intertidal zones. This approach enables robust statistical comparisons between these ecologically distinct areas.
+
+\subsection{Data Structure}
+
+\qquad The merged dataset contains 341 observations across 20 variables. Each observation represents a unique sampling event identified by a \texttt{set\_id}, which combines station location, year, and season information. The dataset includes the following key variable groups, as shown in Table~\ref{tab:variables}. 
+
+\begin{table}[htbp]
+\centering
+\caption{Environmental and Biodiversity Variables Measured in Marine Sediment Samples}
+\label{tab:variables}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3cm}>{\ttfamily\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}X}
+\hline
+\textbf{Category} & \textbf{Variable} & \textbf{Description} \\
+\hline
+\multirow{5}{=}{Sampling metadata} 
+    & set\_id & Unique identifier for sampling event \\
+    & station & Sampling station identifier \\
+    & strata\_strate & Stratification zone designation \\
+    & season\_saison & Sampling season \\
+    & depth\_m\_profondeur\_m & Water depth at sampling location (m) \\
+\hline
+\multirow{4}{=}{Biodiversity metrics} 
+    & total\_count & Total number of organisms collected \\
+    & tot\_wt\_g & Total biomass of collected organisms (g) \\
+    & shannon\_index & Shannon diversity index value \\
+    & species\_richness & Number of distinct species identified \\
+\hline
+\multirow{3}{=}{Sediment moisture/grain size} 
+    & wet\_weight & Weight of sediment sample before drying \\
+    & dry\_weight & Weight of sediment sample after drying \\
+    & water\_content\_ratio & Ratio of water to sediment in sample \\
+\hline
+\multirow{3}{=}{Particle size distribution} 
+    & sand\_pct & Percentage of sand in sediment sample \\
+    & fine\_sand\_pct & Percentage of fine sand in sediment sample \\
+    & silt\_clay\_pct & Percentage of silt and clay in sediment sample \\
+\hline
+\multirow{5}{=}{Organic matter content} 
+    & air\_dry\_wt & Weight after air drying \\
+    & oven\_dry\_wt & Weight after oven drying \\
+    & loss\_ash1 & Weight loss after combustion at 475°C \\
+    & loss\_ash2 & Weight loss after combustion at 950°C \\
+    & tot\_perc\_loss & Total percentage of weight lost during combustion \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\subsection{Target Variable}
+
+\qquad Our primary response variable is total biomass (\texttt{tot\_wt\_g}), which represents the aggregate weight of all benthic organisms collected at each sampling event. This metric serves as a proxy for ecosystem productivity and health within the MPA.
+
+\subsection{Explanatory Variables}
+
+\qquad The explanatory variables include sediment composition metrics, particle size distribution, and organic matter content. These environmental factors are known to influence benthic community structure and biomass through multiple mechanisms, including habitat suitability, food availability, and oxygen conditions.
+
+\subsection{Data Quality Assessment}
+
+\qquad Initial data exploration revealed missing values, particularly in sediment-related variables for earlier sampling years (2010-2011). Approximately $36\%$ of observations had missing values for sediment grain size and moisture content variables, while $18\%$ lacked organic matter content data. No missing values were observed in biodiversity metrics or sampling metadata.
 
 \newpage
 \section{Methods}
